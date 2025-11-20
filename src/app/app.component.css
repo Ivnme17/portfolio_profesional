@@ -288,13 +288,22 @@
 
 /* Estilos específicos para el logo de Astro */
 .astro-logo {
-  background-color: #0F172A !important;
+  background-color: transparent !important;
   padding: 1rem !important;
   border-radius: 12px !important;
   object-fit: contain !important;
   width: 200px !important;
   height: 200px !important;
   min-height: auto !important;
+  filter: var(--logo-filter, invert(0));
+}
+
+/* Ajustes específicos para el tema claro */
+:root[data-theme="light"] .astro-logo {
+  --logo-filter: invert(1);
+  background-color: #f8fafc !important;
+  padding: 1rem !important;
+  border-radius: 12px !important;
 }
 
 .project-description {
