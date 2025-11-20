@@ -1,7 +1,11 @@
 <!-- Portfolio Profesional - Iván Martínez Estrada -->
-
+<div class="snowflakes" id="snowflakes"></div>
 
 <div class="portfolio">
+  <!-- Botón de cambio de tema -->
+  <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="'Cambiar tema. Tema actual: ' + currentTheme">
+    <span class="material-icons-round">{{ currentIcon }}</span>
+  </button>
 
   <!-- Hero Section -->
   <section class="hero">
